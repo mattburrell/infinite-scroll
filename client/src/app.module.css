@@ -1,0 +1,25 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  row-gap: 1rem;
+}
+
+.search {
+  display: flex;
+  column-gap: 0.5rem;
+}
+
+.label {
+  display: none;
+}
+
+.input {
+}
+
+.button {
+}
+
+.error {
+  color: red;
+}
