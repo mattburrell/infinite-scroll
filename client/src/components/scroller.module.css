@@ -1,0 +1,8 @@
+.wrapper {
+  max-height: 500px;
+  width: 100%;
+  overflow: auto;
+  border: 2px solid #ccc;
+  padding: 1rem;
+  scroll-behavior: smooth;
+}

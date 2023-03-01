@@ -28,7 +28,7 @@ const App = () => {
   };
 
   return (
-    <div id="top" className={styles.wrapper}>
+    <div className={styles.wrapper}>
       <div className={styles.search}>
         <label htmlFor="search" className={styles.label}>
           Search

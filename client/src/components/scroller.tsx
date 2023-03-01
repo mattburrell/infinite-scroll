@@ -6,6 +6,7 @@ import ItunesResult from "./itunes-result";
 import BackToTop from "./back-to-top";
 import Loader from "./loader";
 import NoResults from "./no-results";
+import styles from "./scroller.module.css";
 
 export default function Scroller() {
   const dispatch = useAppDispatch();
@@ -19,6 +20,7 @@ export default function Scroller() {
   const isIdle = loading === "idle";
 
   const visibleData = data.slice(0, page * pageSize);
+  const hasData = visibleData.length > 0;
 
   const intObserver = useRef<HTMLDivElement | IntersectionObserver | null>(
     null
@@ -58,10 +60,11 @@ export default function Scroller() {
   }
 
   return (
-    <>
+    <div className={hasData ? styles.wrapper : ""}>
+      <div id="top" />
       {content}
       {isLoading && <Loader />}
-      {visibleData.length > 0 && <BackToTop />}
-    </>
+      {hasData && <BackToTop id="top" />}
+    </div>
   );
 }

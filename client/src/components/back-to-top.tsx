@@ -1,7 +1,11 @@
-export default function BackToTop() {
+interface BackToTopProps {
+  id: string;
+}
+
+export default function BackToTop({ id }: BackToTopProps) {
   return (
-    <p>
-      <a href="#top">Back to Top</a>
+    <p style={{ textAlign: "center" }}>
+      <a href={`#${id}`}>Back to Top</a>
     </p>
   );
 }
